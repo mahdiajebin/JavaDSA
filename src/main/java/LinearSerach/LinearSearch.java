@@ -2,18 +2,18 @@ package LinearSerach;
 
 public class LinearSearch {
 
-    public static void main(String[] args) {
+//    public static void main(String[] args) {
+////        int [] nums = {23,45,1,3,45, 6,67,34,64,56,34,78,-3};
+////        int target = 36;
+////        int ans = linearSearch(nums,target);
+////        System.out.println(" at index " + ans);
 //        int [] nums = {23,45,1,3,45, 6,67,34,64,56,34,78,-3};
-//        int target = 36;
-//        int ans = linearSearch(nums,target);
-//        System.out.println(" at index " + ans);
-        int [] nums = {23,45,1,3,45, 6,67,34,64,56,34,78,-3};
-        int target = 45;
-        int ans = linearSearch2(nums,target);
-        System.out.println(" element value " + ans);
-
-
-    }
+//        int target = 100;
+//        int ans = linearSearch3(nums,target);
+//        System.out.println(" element value " + ans);
+//
+//
+//    }
 
     //search in the array: return the index if item found
     //otherwise if item is not found return -1;
@@ -55,13 +55,13 @@ public class LinearSearch {
         }
         // this line will execute if none of the return statemnt above was executed
         // target not found //
-        return -1;
+        return Integer.MAX_VALUE;
 
     }
-    // search for the target and return the element
-    static int linearSearch3(int[] arr, int target){
+    // search for the target and return true or false
+    static boolean linearSearch3(int[] arr, int target){
         if(arr.length ==0 ){
-            return -1;
+            return false;
         }
 
         //run a for loop
@@ -69,15 +69,17 @@ public class LinearSearch {
         for (int element : arr) {
             //check for element at every index if its = target
             if (element == target) { // if element matches the target
-                return element; // return the element
+                return true; // return the element
             }
 
         }
         // this line will execute if none of the return statemnt above was executed
         // target not found //
-        return Integer.MAX_VALUE;
+        return false;
 
     }
+
+
 
 }
 
